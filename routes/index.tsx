@@ -8,7 +8,6 @@ export default function Home() {
         <title>Fresh Components Beta</title>
       </Head>
       <div class="p-4 mx-auto max-w-screen-md">
-
         <h1 class="text-4xl font-bold">Fresh Components Beta</h1>
 
         <Gallery />

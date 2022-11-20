@@ -2,7 +2,6 @@
 
 - To provide niche components for websites
 
-
 ### Usage
 
 Start the project:
