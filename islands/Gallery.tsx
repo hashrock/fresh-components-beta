@@ -41,6 +41,13 @@ export default function Counter() {
           code={codeExample}
           copy
         />
+
+        <h3>Note</h3>
+
+        <p>To use this component, you have to include this code somewhere.</p>
+        <pre class="whitespace-pre-wrap border rounded border-gray-500 p-3">
+&lt;Head&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;https://esm.sh/prismjs@1.27.0/themes/prism-dark.min.css&quot;/&gt;&lt;/Head&gt;
+        </pre>
       </div>
     </div>
   );
