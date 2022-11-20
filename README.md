@@ -1,4 +1,7 @@
-# fresh project
+# Fresh Components Beta
+
+- To provide niche components for websites
+
 
 ### Usage
 
