@@ -20,7 +20,7 @@ function SourceLink(props: { href: string }) {
   );
 }
 
-export default function Counter() {
+export default function Gallery() {
   return (
     <div class="space-y-8 py-8">
       <Head>
