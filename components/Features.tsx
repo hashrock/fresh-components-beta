@@ -1,6 +1,7 @@
 import IconAlarm from "https://deno.land/x/tabler_icons_tsx@0.0.2/tsx/alarm.tsx";
 import IconAirBalloon from "https://deno.land/x/tabler_icons_tsx@0.0.2/tsx/air-balloon.tsx";
 import IconArmchair from "https://deno.land/x/tabler_icons_tsx@0.0.2/tsx/armchair.tsx";
+import IconChevronRight from "https://deno.land/x/tabler_icons_tsx@0.0.2/tsx/chevron-right.tsx";
 
 export default function Features() {
   const featureItems = [
@@ -8,6 +9,7 @@ export default function Features() {
       icon: IconAlarm,
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam aliquam",
+      link: "#",
     },
     {
       icon: IconAirBalloon,
@@ -17,6 +19,7 @@ export default function Features() {
     {
       icon: IconArmchair,
       description: "Eget aliquam nisl nisl sit amet lorem.",
+      link: "#",
     },
   ];
 
@@ -31,6 +34,16 @@ export default function Features() {
             <p class="text-xl">
               {item.description}
             </p>
+
+            {item.link &&
+              (
+                <a class="block" href={item.link}>
+                  <p class="text-blue-500 cursor-pointer hover:underline inline-flex items-center group">
+                    Read More{" "}
+                    <IconChevronRight class="inline-block w-5 h-5 transition group-hover:translate-x-0.5" />
+                  </p>
+                </a>
+              )}
           </div>
         );
       })}
