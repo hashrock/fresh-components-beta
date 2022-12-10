@@ -1,5 +1,7 @@
 import { useState } from "preact/hooks";
 import CodeBlock from "../components/CodeBlock.tsx";
+import Features from "../components/Features.tsx";
+
 import { Head } from "$fresh/runtime.ts";
 import IconSourceCode from "https://deno.land/x/tabler_icons_tsx@0.0.2/tsx/source-code.tsx";
 const codeExample = `import { useState } from "preact/hooks
@@ -30,6 +32,9 @@ export default function Gallery() {
         />
       </Head>
       <div class="space-y-4">
+        <h2 class="text-2xl font-bold">Features</h2>
+        <Features />
+
         <h2 class="text-2xl font-bold">Code Block</h2>
 
         <SourceLink href="https://github.com/hashrock/fresh-components-beta/blob/main/components/CodeBlock.tsx" />
