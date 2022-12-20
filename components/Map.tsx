@@ -1,16 +1,13 @@
-import {
-  geoEqualEarth,
-  geoPath,
-} from "https://cdn.jsdelivr.net/npm/d3-geo@3/+esm";
+import * as geo from "https://esm.sh/d3-geo@3.0.1";
 import * as topojson from "https://esm.sh/topojson-client@3.1.0";
-import world from "https://cdn.jsdelivr.net/npm/world-atlas@2/land-110m.json" assert {
+import world from "https://esm.sh/world-atlas@2.0.2/land-110m.json" assert {
   type: "json",
 };
 
 export default function Map() {
-  const projection = geoEqualEarth();
-  const path = geoPath(projection, null);
-
+  const projection = geo.geoEqualEarth();
+  
+  const path = geo.geoPath(projection, null);
   const land = topojson.feature(world, world.objects.land);
 
   return (
