@@ -15,16 +15,17 @@ export default function Map() {
   );
   const path = geo.geoPath(projection, null);
   const land = topojson.feature(world, world.objects.land);
+  const line = path(land);
 
   return (
-    <div class="flex flex-col items-center justify-center">
-      <h1 class="text-4xl font-bold">Map</h1>
-      <p class="text-gray-500">This is the Map page.</p>
-      <svg viewBox={`0 0 ${width} ${height}`} style="display: block;">
-        <g>
-          <path d={path(land)}></path>
-        </g>
-      </svg>
+    <div>
+      {line && (
+        <svg viewBox={`0 0 ${width} ${height}`} style="display: block;">
+          <g>
+            <path fill="green" d={line}></path>
+          </g>
+        </svg>
+      )}
     </div>
   );
 }
