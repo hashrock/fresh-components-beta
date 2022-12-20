@@ -1,0 +1,128 @@
+[
+  {
+    "name": "us-east-1",
+    "city": "Virginia",
+    "lat": 38.13,
+    "lon": -78.45
+  },
+  {
+    "name": "us-east-2",
+    "city": "Ohio",
+    "lat": 39.96,
+    "lon": -83
+  },
+  {
+    "name": "eu-north-1",
+    "city": "Stockholm",
+    "lat": 59.25,
+    "lon": 17.81
+  },
+  {
+    "name": "eu-south-1",
+    "city": "Milan",
+    "lat": 45.43,
+    "lon": 9.29
+  },
+  {
+    "name": "us-west-1",
+    "city": "California",
+    "lat": 37.35,
+    "lon": -121.96
+  },
+  {
+    "name": "us-west-2",
+    "city": "Oregon",
+    "lat": 46.15,
+    "lon": -123.88
+  },
+  {
+    "name": "eu-west-1",
+    "city": "Ireland",
+    "lat": 53,
+    "lon": -8
+  },
+  {
+    "name": "eu-west-2",
+    "city": "London",
+    "lat": 51,
+    "lon": -0.1
+  },
+  {
+    "name": "eu-west-3",
+    "city": "Paris",
+    "lat": 48.86,
+    "lon": 2.35
+  },
+  {
+    "name": "eu-central-1",
+    "city": "Frankfurt",
+    "lat": 50,
+    "lon": 8
+  },
+  {
+    "name": "sa-east-1",
+    "city": "Sao Paulo",
+    "lat": -23.34,
+    "lon": -46.38
+  },
+  {
+    "name": "ap-southeast-1",
+    "city": "Singapore",
+    "lat": 1.37,
+    "lon": 103.8
+  },
+  {
+    "name": "ap-southeast-2",
+    "city": "Sydney",
+    "lat": -33.86,
+    "lon": 151.2
+  },
+  {
+    "name": "ap-northeast-1",
+    "city": "Tokyo",
+    "lat": 35.41,
+    "lon": 139.42
+  },
+  {
+    "name": "ap-northeast-2",
+    "city": "Seoul",
+    "lat": 37.56,
+    "lon": 126.98
+  },
+  {
+    "name": "ap-northeast-3",
+    "city": "Osaka",
+    "lat": 34.69,
+    "lon": 135.49
+  },
+  {
+    "name": "ap-south-1",
+    "city": "Mumbai",
+    "lat": 19.08,
+    "lon": 72.88
+  },
+  {
+    "name": "ca-central-1",
+    "city": "Canada Central",
+    "lat": 45.5,
+    "lon": -73.6
+  },
+  {
+    "name": "ap-east-1",
+    "city": "Hong Kong",
+    "lat": 22.27,
+    "lon": 114.16
+  },
+  {
+    "name": "me-south-1",
+    "city": "Bahrain",
+    "lat": 26.1,
+    "lon": 50.46
+  },
+  {
+    "name": "af-south-1",
+    "city": "South Africa",
+    "lat": -33.93,
+    "lon": 18.42
+  }
+]
