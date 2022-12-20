@@ -40,6 +40,9 @@ export default function Gallery() {
             Upstream
           </a>
         </p>
+
+        <h2 class="text-2xl font-bold">Map</h2>
+
         <Map />
 
         <h2 class="text-2xl font-bold">Code Block</h2>
