@@ -1,7 +1,5 @@
 import { useState } from "preact/hooks";
 import CodeBlock from "../components/CodeBlock.tsx";
-import Features from "../components/Features.tsx";
-import Hero from "../components/Hero.tsx";
 
 import { Head } from "$fresh/runtime.ts";
 import IconSourceCode from "https://deno.land/x/tabler_icons_tsx@0.0.2/tsx/source-code.tsx";
@@ -33,11 +31,10 @@ export default function Gallery() {
         />
       </Head>
       <div class="space-y-4">
-        <h2 class="text-2xl font-bold">Hero</h2>
-        <Hero />
+        <p>
+          <a class="underline text-blue-500" href="https://fresh.deno.dev/components">Upstream</a>
+        </p>
 
-        <h2 class="text-2xl font-bold">Features</h2>
-        <Features />
 
         <h2 class="text-2xl font-bold">Code Block</h2>
 
