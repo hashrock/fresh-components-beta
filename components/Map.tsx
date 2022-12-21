@@ -3,7 +3,7 @@ import * as topojson from "https://esm.sh/topojson-client@3.1.0";
 import world from "https://esm.sh/world-atlas@2.0.2/land-110m.json" assert {
   type: "json",
 };
-import dataCenters from "../data/dataCenters.json" assert {
+import dataCenters from "../data/datacenters.json" assert {
   type: "json",
 };
 
