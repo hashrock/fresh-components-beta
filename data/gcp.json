@@ -1,0 +1,56 @@
+{
+  "asia-east1": { "city": "Taiwan", "lat": 25.0478, "lng": 121.5318 },
+  "asia-east2": { "city": "Hong Kong", "lat": 22.3964, "lng": 114.1095 },
+  "asia-northeast1": { "city": "Tokyo", "lat": 35.6895, "lng": 139.6917 },
+  "asia-northeast2": { "city": "Osaka", "lat": 34.6937, "lng": 135.5023 },
+  "asia-northeast3": { "city": "Seoul", "lat": 37.5665, "lng": 126.9780 },
+  "asia-south1": { "city": "Mumbai", "lat": 19.0760, "lng": 72.8777 },
+  "asia-south2": { "city": "Delhi", "lat": 28.7041, "lng": 77.1025 },
+  "asia-southeast1": { "city": "Singapore", "lat": 1.3521, "lng": 103.8198 },
+  "asia-southeast2": { "city": "Jakarta", "lat": -6.2146, "lng": 106.8451 },
+  "australia-southeast1": {
+    "city": "Sydney",
+    "lat": -33.8688,
+    "lng": 151.2093
+  },
+  "australia-southeast2": {
+    "city": "Melbourne",
+    "lat": -37.8136,
+    "lng": 144.9631
+  },
+  "europe-central2": { "city": "Warsaw", "lat": 52.2297, "lng": 21.0122 },
+  "europe-north1": { "city": "Finland", "lat": 60.1699, "lng": 24.9384 },
+  "europe-west1": { "city": "Belgium", "lat": 50.8503, "lng": 4.3517 },
+  "europe-west2": { "city": "London", "lat": 51.5074, "lng": 0.1278 },
+  "europe-west3": { "city": "Frankfurt", "lat": 50.1109, "lng": 8.6821 },
+  "europe-west4": { "city": "Netherlands", "lat": 52.1326, "lng": 5.2913 },
+  "europe-west6": { "city": "Zurich", "lat": 47.3769, "lng": 8.5417 },
+  "europe-west8": { "city": "Milan", "lat": 45.4642, "lng": 9.1895 },
+  "europe-west9": { "city": "Paris", "lat": 48.8566, "lng": 2.3522 },
+  "europe-southwest1": { "city": "Madrid", "lat": 40.4168, "lng": 3.7038 },
+  "northamerica-northeast1": {
+    "city": "Montréal",
+    "lat": 45.5017,
+    "lng": -73.5673
+  },
+  "northamerica-northeast2": {
+    "city": "Toronto",
+    "lat": 43.6532,
+    "lng": -79.3832
+  },
+  "southamerica-east1": {
+    "city": "São Paulo",
+    "lat": -23.5505,
+    "lng": -46.6333
+  },
+  "southamerica-west1": { "city": "Chile", "lat": -33.4489, "lng": -70.6693 },
+  "us-central1": { "city": "Iowa", "lat": 41.8781, "lng": 93.0977 },
+  "us-east1": { "city": "South Carolina", "lat": 33.8361, "lng": 81.1637 },
+  "us-east4": { "city": "North Virginia", "lat": 38.9072, "lng": 77.0369 },
+  "us-east5": { "city": "Ohio", "lat": 40.4173, "lng": 82.9071 },
+  "us-south1": { "city": "Texas", "lat": 29.7604, "lng": 95.3698 },
+  "us-west1": { "city": "Oregon", "lat": 45.4215, "lng": 122.6762 },
+  "us-west2": { "city": "California", "lat": 37.7749, "lng": 122.4194 },
+  "us-west3": { "city": "Utah", "lat": 40.7608, "lng": 111.8910 },
+  "us-west4": { "city": "Nevada", "lat": 36.1699, "lng": 115.1398 }
+}

@@ -14,7 +14,7 @@ export default function Home() {
         <p>
           region : {region}
         </p>
-        <Gallery />
+        <Gallery current={region} />
       </div>
     </>
   );

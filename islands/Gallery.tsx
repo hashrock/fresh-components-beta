@@ -21,8 +21,11 @@ function SourceLink(props: { href: string }) {
     </a>
   );
 }
+interface GalleryProps {
+  current: string;
+}
 
-export default function Gallery() {
+export default function Gallery(props: GalleryProps) {
   return (
     <div class="space-y-8 py-8">
       <Head>
@@ -43,7 +46,7 @@ export default function Gallery() {
 
         <h2 class="text-2xl font-bold">Map</h2>
 
-        <Map />
+        <Map current={props.current} />
 
         <h2 class="text-2xl font-bold">Code Block</h2>
 
@@ -61,7 +64,7 @@ export default function Gallery() {
 
         <p>To use this component, you have to include this code somewhere.</p>
         <pre class="whitespace-pre-wrap border rounded border-gray-500 p-3">
-&lt;Head&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;https://esm.sh/prismjs@1.27.0/themes/prism-dark.min.css&quot;/&gt;&lt;/Head&gt;
+          &lt;Head&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;https://esm.sh/prismjs@1.27.0/themes/prism-dark.min.css&quot;/&gt;&lt;/Head&gt;
         </pre>
       </div>
     </div>

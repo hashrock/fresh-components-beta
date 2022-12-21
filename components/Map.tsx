@@ -3,11 +3,24 @@ import * as topojson from "https://esm.sh/topojson-client@3.1.0";
 import world from "https://esm.sh/world-atlas@2.0.2/land-110m.json" assert {
   type: "json",
 };
-import dataCenters from "../data/datacenters.json" assert {
+
+interface Gcp {
+  [key: string]: {
+    city: string;
+    lat: number;
+    lng: number;
+  };
+}
+
+import dataCenters from "../data/gcp.json" assert {
   type: "json",
 };
 
-export default function Map() {
+interface MapProps {
+  current: string;
+}
+
+export default function Map(props: MapProps) {
   const width = 600;
   const height = 300;
 
@@ -21,13 +34,14 @@ export default function Map() {
   const land = topojson.feature(world, world.objects.land);
   const line = path(land);
 
-  const dataCentersGeo = dataCenters.map((dc) => {
+  const dataCentersGeo = Object.keys(dataCenters as Gcp).map((key) => {
+    const dc = (dataCenters as Gcp)[key];
     return {
       ...dc,
-      coordinates: projection([dc.lon, dc.lat]) ?? [0, 0]
+      name: key,
+      coordinates: projection([dc.lng, dc.lat]) ?? [0, 0],
     };
   });
-
 
   return (
     <div>
@@ -36,16 +50,41 @@ export default function Map() {
           <g>
             <path fill="#aaa" d={line}></path>
           </g>
-          {
-            dataCentersGeo.map((dc) => {
-              return (
-                <g>
-                  <circle cx={dc.coordinates[0]} cy={dc.coordinates[1]} r="5" fill="red"></circle>
-                  <text font-size={10} x={dc.coordinates[0]} y={dc.coordinates[1] - 10} fill="black" text-anchor="middle" alignment-baseline="middle">{dc.name}</text>
-                </g>
-              );
-            })
-          }
+          {dataCentersGeo.map((dc) => {
+            return (
+              <g>
+                {(props.current === dc.name)
+                  ? (
+                    <circle
+                      cx={dc.coordinates[0]}
+                      cy={dc.coordinates[1]}
+                      r="5"
+                      fill="red"
+                    >
+                    </circle>
+                  )
+                  : (
+                    <circle
+                      cx={dc.coordinates[0]}
+                      cy={dc.coordinates[1]}
+                      r="2"
+                      fill="blue"
+                    >
+                    </circle>
+                  )}
+                <text
+                  font-size={10}
+                  x={dc.coordinates[0]}
+                  y={dc.coordinates[1] - 10}
+                  fill="black"
+                  text-anchor="middle"
+                  alignment-baseline="middle"
+                >
+                  {dc.name}
+                </text>
+              </g>
+            );
+          })}
         </svg>
       )}
     </div>
