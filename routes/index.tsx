@@ -1,6 +1,8 @@
 import { Head } from "$fresh/runtime.ts";
 import Gallery from "../islands/Gallery.tsx";
 
+const region = Deno.env.get("DEPLOY_REGION") || "none";
+
 export default function Home() {
   return (
     <>
@@ -9,7 +11,9 @@ export default function Home() {
       </Head>
       <div class="p-4 mx-auto max-w-screen-md">
         <h1 class="text-4xl font-bold">Fresh Components Beta</h1>
-
+        <p>
+          region : {region}
+        </p>
         <Gallery />
       </div>
     </>
