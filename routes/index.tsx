@@ -1,7 +1,7 @@
 import { Head } from "$fresh/runtime.ts";
 import Gallery from "../islands/Gallery.tsx";
 
-const region = Deno.env.get("DEPLOY_REGION") || "none";
+const region = Deno.env.get("DENO_REGION") || "none";
 
 export default function Home() {
   return (
