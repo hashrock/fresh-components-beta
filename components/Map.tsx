@@ -85,11 +85,28 @@ export default function Map(props: MapProps) {
           <g>
             <path fill="#E5E5E5" d={line}></path>
           </g>
+
           {dataCentersGeo.map((dc) => {
             return (
               <g class="group">
-                {(props.current === dc.name)
-                  ? (
+                <use
+                  href="#deno-logo"
+                  transform="translate(-5, -12.5)"
+                  width={20}
+                  height={20}
+                  x={dc.coordinates[0] - 5.5}
+                  y={dc.coordinates[1] + 2}
+                />
+              </g>
+            );
+          })}
+
+          {/* Label and hit area */}
+          {dataCentersGeo.map((dc) => {
+            return (
+              <g class="group">
+                {(props.current === dc.name) &&
+                  (
                     <circle
                       cx={dc.coordinates[0]}
                       cy={dc.coordinates[1]}
@@ -111,30 +128,20 @@ export default function Map(props: MapProps) {
                         begin="0.1"
                       />
                     </circle>
-                  )
-                  : (
-                    <use
-                      href="#deno-logo"
-                      transform="translate(-5, -12.5)"
-                      width={20}
-                      height={20}
-                      x={dc.coordinates[0]}
-                      y={dc.coordinates[1]}
-                    />
                   )}
                 <circle
                   cx={dc.coordinates[0]}
                   cy={dc.coordinates[1]}
-                  r="5"
+                  r="15"
                   fill="rgba(0,0,0,0)"
                 >
                 </circle>
                 <rect
-                  x={dc.coordinates[0] - 60}
-                  y={dc.coordinates[1] - 20}
-                  width="120"
+                  x={dc.coordinates[0] - 70}
+                  y={dc.coordinates[1] - 30}
+                  width="140"
                   height="20"
-                  fill="rgba(255,255,255,0.5)"
+                  fill="rgba(255,255,255,1)"
                   rx={5}
                   ry={5}
                   class="opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
@@ -143,8 +150,8 @@ export default function Map(props: MapProps) {
                 <text
                   font-size={10}
                   x={dc.coordinates[0]}
-                  y={dc.coordinates[1] - 10}
-                  fill="black"
+                  y={dc.coordinates[1] - 20}
+                  fill="#666"
                   text-anchor="middle"
                   alignment-baseline="middle"
                   class="opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
