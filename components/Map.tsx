@@ -52,15 +52,29 @@ export default function Map(props: MapProps) {
           </g>
           {dataCentersGeo.map((dc) => {
             return (
-              <g>
+              <g class="group">
                 {(props.current === dc.name)
                   ? (
                     <circle
                       cx={dc.coordinates[0]}
                       cy={dc.coordinates[1]}
                       r="5"
-                      fill="red"
+                      fill="blue"
                     >
+                      <animate
+                        attributeName="opacity"
+                        dur="1s"
+                        values="0;1;0"
+                        repeatCount="indefinite"
+                        begin="0.1"
+                      />
+                      <animate
+                        attributeName="r"
+                        dur="1s"
+                        values="0;5;10"
+                        repeatCount="indefinite"
+                        begin="0.1"
+                      />
                     </circle>
                   )
                   : (
@@ -68,10 +82,29 @@ export default function Map(props: MapProps) {
                       cx={dc.coordinates[0]}
                       cy={dc.coordinates[1]}
                       r="2"
-                      fill="blue"
+                      class="opacity-50 group-hover:opacity-100 transition-opacity"
+                      fill="rgba(50,50,200,1)"
                     >
                     </circle>
                   )}
+                <circle
+                  cx={dc.coordinates[0]}
+                  cy={dc.coordinates[1]}
+                  r="5"
+                  fill="rgba(0,0,0,0)"
+                >
+                </circle>
+                <rect
+                  x={dc.coordinates[0] - 60}
+                  y={dc.coordinates[1] - 20}
+                  width="120"
+                  height="20"
+                  fill="rgba(255,255,255,0.5)"
+                  rx={5}
+                  ry={5}
+                  class="opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
+                >
+                </rect>
                 <text
                   font-size={10}
                   x={dc.coordinates[0]}
@@ -79,6 +112,7 @@ export default function Map(props: MapProps) {
                   fill="black"
                   text-anchor="middle"
                   alignment-baseline="middle"
+                  class="opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
                 >
                   {dc.name}
                 </text>
