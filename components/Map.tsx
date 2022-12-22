@@ -74,7 +74,6 @@ export default function Map(props: MapProps) {
                   fill="#000059"
                   d="M15.4 11a1 1 0 1 1 0 1.8 1 1 0 0 1 0-1.8Z"
                 />
-
               </g>
               <defs>
                 <clipPath id="a">
@@ -114,17 +113,15 @@ export default function Map(props: MapProps) {
                     </circle>
                   )
                   : (
-                    <use href="#deno-logo" transform="translate(-5, -12.5)" width={20} height={20} x={dc.coordinates[0]} y={dc.coordinates[1]} />
-                    // <circle
-                    //   cx={dc.coordinates[0]}
-                    //   cy={dc.coordinates[1]}
-                    //   r="2"
-                    //   class="opacity-50 group-hover:opacity-100 transition-opacity"
-                    //   fill="rgba(50,50,200,1)"
-                    // >
-                    // </circle>
-                  )
-                }
+                    <use
+                      href="#deno-logo"
+                      transform="translate(-5, -12.5)"
+                      width={20}
+                      height={20}
+                      x={dc.coordinates[0]}
+                      y={dc.coordinates[1]}
+                    />
+                  )}
                 <circle
                   cx={dc.coordinates[0]}
                   cy={dc.coordinates[1]}
@@ -158,8 +155,7 @@ export default function Map(props: MapProps) {
             );
           })}
         </svg>
-      )
-      }
-    </div >
+      )}
+    </div>
   );
 }
