@@ -27,7 +27,7 @@
   "europe-west6": { "city": "Zurich", "lat": 47.3769, "lng": 8.5417 },
   "europe-west8": { "city": "Milan", "lat": 45.4642, "lng": 9.1895 },
   "europe-west9": { "city": "Paris", "lat": 48.8566, "lng": 2.3522 },
-  "europe-southwest1": { "city": "Madrid", "lat": 40.4168, "lng": 3.7038 },
+  "europe-southwest1": { "city": "Madrid", "lat": 40.4168, "lng": -3.7038 },
   "northamerica-northeast1": {
     "city": "Montréal",
     "lat": 45.5017,
