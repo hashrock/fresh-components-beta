@@ -4,6 +4,7 @@ import Map from "../components/Map.tsx";
 import { Head } from "$fresh/runtime.ts";
 import IconSourceCode from "https://deno.land/x/tabler_icons_tsx@0.0.2/tsx/source-code.tsx";
 import { Switch } from "../components/Switch.tsx";
+import { MyModal } from "../components/Dialog.tsx";
 const codeExample = `import { useState } from "preact/hooks
 console.log("Hello World!");
 `;
@@ -43,12 +44,15 @@ export default function Gallery(props: GalleryProps) {
             Upstream
           </a>
         </p>
+        <h2 class="text-2xl font-bold">Headless UI Modal</h2>
+
+        <div>
+          <MyModal />
+        </div>
 
         <h2 class="text-2xl font-bold">Headless UI Switch</h2>
 
         <Switch />
-
-
 
         <h2 class="text-2xl font-bold">Map</h2>
 
