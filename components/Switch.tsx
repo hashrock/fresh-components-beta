@@ -1,6 +1,6 @@
 
 import { useState } from "preact/hooks";
-import { Switch as HeadlessSwitch } from "https://esm.sh/@headlessui/react@1.6.6?alias=react:preact/compat,react-dom:preact/compat,@types/react:preact/compatt&external=preact/compat";
+import { Switch as HeadlessSwitch } from "https://esm.sh/@headlessui/react@1.7.15?alias=react:preact/compat,react-dom:preact/compat,@types/react:preact/compatt&external=preact/compat";
 
 export function Switch() {
   const [enabled, setEnabled] = useState(false);
