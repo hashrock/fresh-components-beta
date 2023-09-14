@@ -46,7 +46,8 @@ export default function Gallery(props: GalleryProps) {
           </a>
         </p>
 
-        <h2 class="text-2xl font-bold">Headless UI Listbox</h2>
+        {
+          /* <h2 class="text-2xl font-bold">Headless UI Listbox</h2>
 
         <div>
           <MyListbox />
@@ -60,7 +61,8 @@ export default function Gallery(props: GalleryProps) {
 
         <h2 class="text-2xl font-bold">Headless UI Switch</h2>
 
-        <Switch />
+        <Switch /> */
+        }
 
         <h2 class="text-2xl font-bold">Map</h2>
 
