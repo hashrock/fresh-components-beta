@@ -6,7 +6,10 @@ import IconSourceCode from "https://deno.land/x/tabler_icons_tsx@0.0.2/tsx/sourc
 import { Switch } from "../components/Switch.tsx";
 import { MyModal } from "../components/Dialog.tsx";
 import { MyListbox } from "../components/MyListbox.tsx";
-const codeExample = `import { useState } from "preact/hooks
+import CodeBlockAst from "../components/CodeBlockAst.tsx";
+const codeExample = `import { useState } from "preact/hooks"
+
+// Comment here
 console.log("Hello World!");
 `;
 
@@ -54,13 +57,18 @@ export default function Gallery(props: GalleryProps) {
 
         <SourceLink href="https://github.com/hashrock/fresh-components-beta/blob/main/components/CodeBlock.tsx" />
 
+        <CodeBlockAst code={codeExample} />
+
+        {
+          /*
         <CodeBlock
           code={codeExample}
         />
         <CodeBlock
           code={codeExample}
           copy
-        />
+        /> */
+        }
 
         <h3>Note</h3>
 
