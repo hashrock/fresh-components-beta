@@ -46,24 +46,6 @@ export default function Gallery(props: GalleryProps) {
           </a>
         </p>
 
-        {
-          /* <h2 class="text-2xl font-bold">Headless UI Listbox</h2>
-
-        <div>
-          <MyListbox />
-        </div>
-
-        <h2 class="text-2xl font-bold">Headless UI Modal</h2>
-
-        <div>
-          <MyModal />
-        </div>
-
-        <h2 class="text-2xl font-bold">Headless UI Switch</h2>
-
-        <Switch /> */
-        }
-
         <h2 class="text-2xl font-bold">Map</h2>
 
         <Map current={props.current} />
