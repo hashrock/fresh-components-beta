@@ -6,7 +6,7 @@ import IconSourceCode from "https://deno.land/x/tabler_icons_tsx@0.0.2/tsx/sourc
 import { Switch } from "../components/Switch.tsx";
 import { MyModal } from "../components/Dialog.tsx";
 import { MyListbox } from "../components/MyListbox.tsx";
-import CodeBlockAst from "../components/CodeBlockAst.tsx";
+import CodeBlockHljs from "../components/CodeBlockHljs.tsx";
 const codeExample = `import { useState } from "preact/hooks"
 
 // Comment here
@@ -53,22 +53,19 @@ export default function Gallery(props: GalleryProps) {
 
         <Map current={props.current} />
 
-        <h2 class="text-2xl font-bold">Code Block</h2>
+        <h2 class="text-2xl font-bold">Code Block - Prismjs</h2>
 
         <SourceLink href="https://github.com/hashrock/fresh-components-beta/blob/main/components/CodeBlock.tsx" />
 
-        <CodeBlockAst code={codeExample} />
-
-        {
-          /*
         <CodeBlock
           code={codeExample}
         />
         <CodeBlock
           code={codeExample}
           copy
-        /> */
-        }
+        />
+        <h2 class="text-2xl font-bold">Code Block - Highlight.js</h2>
+        <CodeBlockHljs code={codeExample} />
 
         <h3>Note</h3>
 
