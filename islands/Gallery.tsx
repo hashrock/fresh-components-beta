@@ -7,6 +7,9 @@ import { Switch } from "../components/Switch.tsx";
 import { MyModal } from "../components/Dialog.tsx";
 import { MyListbox } from "../components/MyListbox.tsx";
 import CodeBlockHljs from "../components/CodeBlockHljs.tsx";
+import { Button } from "../components/Button.tsx";
+import { Modal } from "../components/Modal.tsx";
+import { useState } from "preact/hooks";
 const codeExample = `import { useState } from "preact/hooks"
 
 // Comment here
@@ -31,6 +34,8 @@ interface GalleryProps {
 }
 
 export default function Gallery(props: GalleryProps) {
+  const [open, setOpen] = useState(false);
+
   return (
     <div class="space-y-8 py-8">
       <Head>
@@ -48,6 +53,36 @@ export default function Gallery(props: GalleryProps) {
             Upstream
           </a>
         </p>
+
+        <h2 class="text-2xl font-bold">Dialog</h2>
+
+        <div class="bg-gray-200 flex justify-center items-center min-h-[20rem]">
+          <Button
+            onClick={() => {
+              setOpen(true);
+            }}
+          >
+            Open Modal
+          </Button>
+
+          <Modal open={open}>
+            <h1 class="text-2xl">Modal</h1>
+
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+              voluptatum, voluptate, quae ipsa, quas voluptatibus quia
+              voluptates accusantium doloribus quibusdam nemo? Quos, quod
+              voluptas. Quaerat, voluptatem? Quisquam, voluptatum voluptate.
+            </p>
+            <Button
+              onClick={() => {
+                setOpen(false);
+              }}
+            >
+              Close
+            </Button>
+          </Modal>
+        </div>
 
         <h2 class="text-2xl font-bold">Map</h2>
 
