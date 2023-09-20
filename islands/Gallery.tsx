@@ -120,6 +120,23 @@ export default function Gallery(props: GalleryProps) {
           </div>
         </div>
 
+        <div>
+          <h2 class="text-2xl font-bold">Native Popover</h2>
+          <style>
+            {`
+            #mypopover::backdrop{
+              background-color: rgba(0,0,0,0.5);
+            }
+            `}
+          </style>
+          <div>
+            <button popovertarget="mypopover">Toggle the popover</button>
+            <div id="mypopover" class="" popover="auto">
+              Popover content
+            </div>
+          </div>
+        </div>
+
         <h2 class="text-2xl font-bold">Map</h2>
 
         <Map current={props.current} />
