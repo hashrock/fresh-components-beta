@@ -10,6 +10,7 @@ import CodeBlockHljs from "../components/CodeBlockHljs.tsx";
 import { Button } from "../components/Button.tsx";
 import { Modal } from "../components/Modal.tsx";
 import { useState } from "preact/hooks";
+import { NativeDialog } from "../components/NativeDialog.tsx";
 const codeExample = `import { useState } from "preact/hooks"
 
 // Comment here
@@ -35,6 +36,7 @@ interface GalleryProps {
 
 export default function Gallery(props: GalleryProps) {
   const [open, setOpen] = useState(false);
+  const [open2, setOpen2] = useState(false);
 
   return (
     <div class="space-y-8 py-8">
@@ -65,7 +67,12 @@ export default function Gallery(props: GalleryProps) {
             Open Modal
           </Button>
 
-          <Modal open={open}>
+          <Modal
+            open={open}
+            onDismiss={() => {
+              setOpen(false);
+            }}
+          >
             <h1 class="text-2xl">Modal</h1>
 
             <p>
@@ -82,6 +89,27 @@ export default function Gallery(props: GalleryProps) {
               Close
             </Button>
           </Modal>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold">Native Dialog</h2>
+          <Button
+            onClick={() => {
+              setOpen2(false);
+            }}
+          >
+            Open
+          </Button>
+          <NativeDialog open={open2}>
+            <h1>Hello</h1>
+
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+              voluptatum, voluptate, quae ipsa, quas voluptatibus quia
+              voluptates accusantium doloribus quibusdam nemo? Quos, quod
+              voluptas. Quaerat, voluptatem? Quisquam, voluptatum voluptate.
+            </p>
+          </NativeDialog>
         </div>
 
         <h2 class="text-2xl font-bold">Map</h2>
