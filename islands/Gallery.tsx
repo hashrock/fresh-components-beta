@@ -93,29 +93,31 @@ export default function Gallery(props: GalleryProps) {
 
         <div>
           <h2 class="text-2xl font-bold">Native Dialog</h2>
-          <Button
-            onClick={() => {
-              setOpen2(true);
-            }}
-          >
-            Open
-          </Button>
-          <NativeDialog
-            class="max-w-lg"
-            open={open2}
-            onDismiss={() => {
-              setOpen2(false);
-            }}
-          >
-            <h1 class="text-4xl">Hello</h1>
+          <div class="bg-gray-200 flex justify-center items-center min-h-[20rem]">
+            <Button
+              onClick={() => {
+                setOpen2(true);
+              }}
+            >
+              Open Modal
+            </Button>
+            <NativeDialog
+              class="max-w-lg"
+              open={open2}
+              onDismiss={() => {
+                setOpen2(false);
+              }}
+            >
+              <h1 class="text-4xl">Hello</h1>
 
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-              voluptatum, voluptate, quae ipsa, quas voluptatibus quia
-              voluptates accusantium doloribus quibusdam nemo? Quos, quod
-              voluptas. Quaerat, voluptatem? Quisquam, voluptatum voluptate.
-            </p>
-          </NativeDialog>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quisquam voluptatum, voluptate, quae ipsa, quas voluptatibus
+                quia voluptates accusantium doloribus quibusdam nemo? Quos, quod
+                voluptas. Quaerat, voluptatem? Quisquam, voluptatum voluptate.
+              </p>
+            </NativeDialog>
+          </div>
         </div>
 
         <h2 class="text-2xl font-bold">Map</h2>
