@@ -95,13 +95,19 @@ export default function Gallery(props: GalleryProps) {
           <h2 class="text-2xl font-bold">Native Dialog</h2>
           <Button
             onClick={() => {
-              setOpen2(false);
+              setOpen2(true);
             }}
           >
             Open
           </Button>
-          <NativeDialog open={open2}>
-            <h1>Hello</h1>
+          <NativeDialog
+            class="max-w-lg"
+            open={open2}
+            onDismiss={() => {
+              setOpen2(false);
+            }}
+          >
+            <h1 class="text-4xl">Hello</h1>
 
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
