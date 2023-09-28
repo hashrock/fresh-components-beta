@@ -11,6 +11,7 @@ import { Button } from "../components/Button.tsx";
 import { Modal } from "../components/Modal.tsx";
 import { useState } from "preact/hooks";
 import { NativeDialog } from "../components/NativeDialog.tsx";
+import { Float } from "../components/Float.tsx";
 const codeExample = `import { useState } from "preact/hooks"
 
 // Comment here
@@ -55,6 +56,12 @@ export default function Gallery(props: GalleryProps) {
             Upstream
           </a>
         </p>
+
+        <h2 class="text-2xl font-bold">Float</h2>
+
+        <div class="bg-gray-200 flex justify-center items-center min-h-[20rem]">
+          <Float class="relative" />
+        </div>
 
         <h2 class="text-2xl font-bold">Dialog</h2>
 
